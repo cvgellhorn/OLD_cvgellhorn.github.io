@@ -84,12 +84,6 @@ module.exports = {
                 })
             },
 
-            // EJS
-            {
-                test: /\.ejs$/,
-                loader: 'ejs-loader'
-            },
-
             // IMAGES
             {
                 test: /\.(jpe*g|png|gif)$/,
