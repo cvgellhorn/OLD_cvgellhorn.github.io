@@ -1,19 +1,19 @@
 const path = require('path');
-const webpack = require('webpack');
+const merge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpackConfig = require('./webpack.config');
 
-module.exports = Object.assign(webpackConfig, {
+module.exports = merge(webpackConfig, {
 
-    devtool: 'cheap-module-source-map',
+    devtool: 'source-map',
 
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
     },
 
-    plugins: webpackConfig.plugins.concat([
+    plugins: [
         new CleanWebpackPlugin(['dist'])
-    ])
+    ]
 
 });

@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Is the current build a development build
 const IS_DEV = (process.env.NODE_ENV === 'dev');
@@ -41,52 +41,34 @@ module.exports = {
             }
         }),
 
-        new ExtractTextPlugin('styles.[hash].css')
+        new MiniCssExtractPlugin({
+            filename: 'styles.[hash].css'
+        })
     ],
     module: {
         rules: [
             // STYLES
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: IS_DEV
-                            }
-                        }
-                    ]
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
             },
 
             // CSS / SASS
             {
                 test: /\.scss/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: IS_DEV
-                            }
-                        },
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                sourceMap: IS_DEV,
-                                includePaths: [dirAssets]
-                            }
-                        }
-                    ]
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
             },
 
             // IMAGES
             {
-                test: /\.(jpe*g|png|gif)$/,
+                test: /\.(jpe?g|png|gif)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]'
