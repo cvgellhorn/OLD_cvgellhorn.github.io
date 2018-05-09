@@ -73,6 +73,13 @@ body {
             transform: scale(1.2);
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
+
+        &.icon-tumblr {
+            font-size: 30px;
+        }
+        &.icon-camera {
+            font-size: 30px;
+        }
     }
 }
 
