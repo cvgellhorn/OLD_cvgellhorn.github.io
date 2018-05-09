@@ -36,10 +36,10 @@ body {
     border: 4px solid #ffffff;
     transition: transform 500ms ease-in-out;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
-    background-image: url(https://www.gravatar.com/avatar/52869e2103531ad458ab57bf53b29679?s=240);
+    background-image: url(https://www.gravatar.com/avatar/52869e2103531ad458ab57bf53b29679?s=300);
     background-size: cover;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
 
     img {
         display: none;
@@ -52,7 +52,7 @@ body {
 
 .title {
     h2 {
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 200;
         letter-spacing: 2px;
         color: #ffffff;
@@ -66,7 +66,7 @@ body {
         margin: 0 10px;
         text-decoration: none;
         color: #ffffff;
-        font-size: 32px;
+        font-size: 34px;
         transition: transform 250ms ease-in-out, text-shadow 250ms ease-in-out;
 
         &:active {
@@ -79,12 +79,6 @@ body {
 @media only screen and (min-width:961px)  {
     .avatar:hover {
         transform: rotate(360deg);
-    }
-
-    .title {
-        h2 {
-            font-size: 28px;
-        }
     }
 
     .social-icons a:hover {
