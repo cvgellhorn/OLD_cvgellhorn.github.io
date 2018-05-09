@@ -65,11 +65,12 @@ body {
     justify-content: center;
 
     a {
-        margin: 0 12px;
+        margin: 0 10px;
         text-decoration: none;
         color: #ffffff;
         font-size: 34px;
         transition: transform 250ms ease-in-out, text-shadow 250ms ease-in-out;
+        min-width: 32px;
 
         &:active {
             transform: scale(1.2);
