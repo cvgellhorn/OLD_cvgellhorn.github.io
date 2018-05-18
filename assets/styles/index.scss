@@ -55,7 +55,7 @@ body {
         font-weight: 200;
         letter-spacing: 2px;
         color: #ffffff;
-        margin: 30px 0 20px 0;
+        margin: 30px 0 15px 0;
     }
 }
 
@@ -63,31 +63,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 
     a {
-        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: 5px;
         text-decoration: none;
         color: #ffffff;
-        font-size: 34px;
-        transition: transform 250ms ease-in-out, text-shadow 250ms ease-in-out;
-        min-width: 32px;
+        transition: background-color 300ms;
 
         &:active {
-            transform: scale(1.2);
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
-        &.icon-tumblr {
-            margin-top: 1px;
-            font-size: 30px;
-        }
-        &.icon-camera {
-            margin-top: 1px;
-            font-size: 30px;
-        }
-        &.icon-medium {
-            margin-top: 1px;
-            font-size: 32px;
+        i {
+            font-size: 34px;
+
+            &.icon-tumblr {
+                font-size: 30px;
+            }
+            &.icon-camera {
+                font-size: 30px;
+            }
+            &.icon-medium {
+                font-size: 32px;
+            }
+            &.icon-soundcloud {
+                font-size: 28px;
+            }
         }
     }
 }
@@ -98,7 +107,6 @@ body {
     }
 
     .social-icons a:hover {
-        transform: scale(1.2);
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.2);
     }
 }
