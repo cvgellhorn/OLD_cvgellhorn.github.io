@@ -1,3 +1,3 @@
 // Styles
-import "styles/font.scss";
-import 'styles/index.scss';
+import '../styles/font.scss';
+import '../styles/index.scss';
