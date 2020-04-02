@@ -37,7 +37,8 @@ module.exports = {
             title: appHtmlTitle,
             inject: false,
             minify: {
-                collapseWhitespace: true
+                collapseWhitespace: true,
+                removeComments: true
             }
         }),
 
