@@ -4,8 +4,8 @@
 .sass-cache
 
 ## Directories
-log/
-node_modules/
+log
+node_modules
 
 ## Files
 result.xml
