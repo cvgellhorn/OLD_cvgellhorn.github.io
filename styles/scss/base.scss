@@ -97,6 +97,12 @@ body {
                 font-size: 24pt;
             }
         }
+
+        span {
+            line-height: 0; 
+            font-size: 0;
+            color: transparent; 
+        }
     }
 }
 
