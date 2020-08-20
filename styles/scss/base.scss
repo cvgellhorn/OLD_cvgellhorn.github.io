@@ -68,8 +68,10 @@ body {
         height: 50px;
         margin: 0 5px;
         text-decoration: none;
-        color: #ffffff;
         transition: background-color 300ms ease-in;
+        line-height: 0; 
+        font-size: 0;
+        color: transparent;
 
         i {
             font-size: 26pt;
