@@ -32,8 +32,7 @@ module.exports = env => {
 
             new HtmlWebpackPlugin({
                 template: path.join(__dirname, 'app', 'template.ejs'),
-                // filename: IS_DEV ? 'index.html' : '../index.html',
-                filename: 'index.html',
+                filename: IS_DEV ? 'index.html' : '../index.html',
                 title: 'Christoph von Gellhorn',
                 inject: false,
                 minify: {
