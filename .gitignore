@@ -10,4 +10,4 @@ node_modules/
 ## Files
 result.xml
 npm-debug.log
-dist/*.js*
+docs/*.js*
