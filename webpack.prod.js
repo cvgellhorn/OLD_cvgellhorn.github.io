@@ -11,8 +11,7 @@ module.exports = env => {
         devtool: 'source-map',
     
         output: {
-            path: path.join(__dirname, 'dist'),
-            filename: '[name].[chunkhash].js'
+            filename: '[name].[contenthash].js'
         },
     
         plugins: [
