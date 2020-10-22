@@ -22,7 +22,8 @@ module.exports = env => {
             new CopyPlugin({
                 patterns: [
                     { from: path.join(__dirname, 'assets'), to: 'assets' },
-                    'favicon.ico'
+                    'favicon.ico',
+                    'CNAME'
                 ]
             })
         ]
