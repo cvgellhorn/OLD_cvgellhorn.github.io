@@ -31,8 +31,7 @@ module.exports = env => {
             new webpack.DefinePlugin({ IS_DEV }),
 
             new HtmlWebpackPlugin({
-                template: path.join(__dirname, 'app', 'template.ejs'),
-                // filename: IS_DEV ? 'index.html' : '../index.html',
+                template: path.join(__dirname, 'index.ejs'),
                 filename: 'index.html',
                 title: 'Christoph von Gellhorn',
                 inject: false,
